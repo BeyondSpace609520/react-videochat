@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 app.use('/', express.static(`${__dirname}/../client`));
 
-server.listen(5000, () => {
+server.listen(config.PORT, () => {
   socket(server);
-  console.log('Server is listening at :', 5000);
+  console.log('Server is listening at :', config.PORT);
 });
